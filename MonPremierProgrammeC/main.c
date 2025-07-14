@@ -2,24 +2,20 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main()
+// La ligne suivante est le prototype de la fonction aireRectangle :
+double aireRectangle(double largeur, double hauteur);
+
+int main(int argc, char *argv[])
 {
-   int resultat = 0, nombre1 = 0, nombre2 = 0;
+    printf("Rectangle de largeur 5 et hauteur 10. Aire = %f\n", aireRectangle(5, 10));
+    printf("Rectangle de largeur 2.5 et hauteur 3.5. Aire = %f\n", aireRectangle(2.5, 3.5));
+    printf("Rectangle de largeur 4.2 et hauteur 9.7. Aire = %f\n", aireRectangle(4.2, 9.7));
 
-  // On demande les nombres 1 et 2 à l'utilisateur :
+    return 0;
+}
 
-  printf("Entrez le nombre 1 : ");
-  scanf("%d", &nombre1);
-  printf("Entrez le nombre 2 : ");
-  scanf("%d", &nombre2);
-
-  // On fait le calcul :
-
-  resultat = nombre1 + nombre2;
-
-  // Et on affiche l'addition à l'écran :
-
-  printf ("%d + %d = %d\n", nombre1, nombre2, resultat);
-
-  return 0;
+// Notre fonction aireRectangle peut maintenant être mise n'importe où dans le code source :
+double aireRectangle(double largeur, double hauteur)
+{
+    return largeur * hauteur;
 }
